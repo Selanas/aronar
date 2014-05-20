@@ -59,11 +59,12 @@ doctrine:
         # path:     "%database_path%"
 
     orm:
-        #auto_generate_proxy_classes: "%kernel.debug%"
+        auto_generate_proxy_classes: "%kernel.debug%"
         #auto_mapping: true #A supprimer
         entity_managers:
             default:
                 mappings:
+                    FOSUserBundle: ~
                     ApplicationSonataUserBundle: ~
                     SonataUserBundle: ~
 
@@ -85,11 +86,7 @@ sonata_block:
         sonata.user.block.menu:    # used to display the menu in profile pages
         sonata.user.block.account: # used to display menu option (login option)
         # Your other blocks
-# app/config/config.yml
 
-sonata_user:
-    security_acl: true
-    manager_type: orm # can be orm or mongodb
 
 fos_user:
     db_driver:      orm # can be orm or odm
@@ -103,3 +100,38 @@ fos_user:
 
     service:
         user_manager: sonata.user.orm.user_manager                      # If you're using doctrine orm (use sonata.user.mongodb.group_manager for mongodb)
+
+    profile:
+        # Authentication Form
+        form:
+            type:               fos_user_profile
+            handler:            fos_user.profile.form.handler.default
+            name:               fos_user_profile_form
+            validation_groups:  [Authentication] # Please note : this is not the default value
+
+sonata_user:
+    security_acl:           false
+
+    manager_type: orm # Can be orm for mongodb
+
+    table:
+        user_group: "my_custom_user_group_association_table_name"
+
+    impersonating:
+        route:                page_slug
+        parameters:           { path: / }
+
+    class:                  # Entity Classes
+        user:               Application\Sonata\UserBundle\Entity\User
+        group:              Application\Sonata\UserBundle\Entity\Group
+
+    admin:                  # Admin Classes
+        user:
+            class:          Sonata\UserBundle\Admin\Entity\UserAdmin
+            controller:     SonataAdminBundle:CRUD
+            translation:    SonataUserBundle
+
+        group:
+            class:          Sonata\UserBundle\Admin\Entity\GroupAdmin
+            controller:     SonataAdminBundle:CRUD
+            translation:    SonataUserBundle
