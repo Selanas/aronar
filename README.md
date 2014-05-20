@@ -1,3 +1,13 @@
+Liste des documentations relatives au Bundles pré-instalé
+========================================================
+
+Sonata AdminBundle + ORMmodule
+-----------------------------
+http://sonata-project.org/bundles/admin/2-2/doc/reference/getting_started.html
+
+
+
+
 Symfony Standard Edition
 ========================
 

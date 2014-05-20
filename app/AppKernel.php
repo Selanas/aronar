@@ -19,7 +19,7 @@ class AppKernel extends Kernel
                 // Add your dependencies
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
-            new Sonata\jQueryBundle\SonatajQueryBundle(),
+            //new Sonata\jQueryBundle\SonatajQueryBundle(),   //Semble Mort ?
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
                 
 
