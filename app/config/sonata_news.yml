@@ -1,0 +1,13 @@
+sonata_news:
+    title:        Aronar
+    link:         http://www.aronar.com
+    description:  Space Opera 4X
+    salt:         'Suck0nMyCh0c01atesaltyBALLS'
+    permalink_generator: sonata.news.permalink.date # sonata.news.permalink.collection
+
+    comment:
+        notification:
+            emails:   [email@example.org, email2@example.org]
+            from:     no-reply@sonata-project.org
+            template: 'SonataNewsBundle:Mail:comment_notification.txt.twig'
+

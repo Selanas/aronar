@@ -6,13 +6,20 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Sonata\\jQueryBundle\\' => array($vendorDir . '/sonata-project/jquery-bundle'),
     'Sonata\\UserBundle\\' => array($vendorDir . '/sonata-project/user-bundle'),
+    'Sonata\\NotificationBundle\\' => array($vendorDir . '/sonata-project/notification-bundle'),
+    'Sonata\\NewsBundle\\' => array($vendorDir . '/sonata-project/news-bundle'),
+    'Sonata\\MediaBundle\\' => array($vendorDir . '/sonata-project/media-bundle'),
+    'Sonata\\IntlBundle\\' => array($vendorDir . '/sonata-project/intl-bundle'),
+    'Sonata\\FormatterBundle\\' => array($vendorDir . '/sonata-project/formatter-bundle'),
     'Sonata\\EasyExtendsBundle\\' => array($vendorDir . '/sonata-project/easy-extends-bundle'),
     'Sonata\\Doctrine\\Tests\\' => array($vendorDir . '/sonata-project/doctrine-extensions/tests'),
     'Sonata\\Doctrine\\' => array($vendorDir . '/sonata-project/doctrine-extensions/src'),
     'Sonata\\DoctrineORMAdminBundle\\' => array($vendorDir . '/sonata-project/doctrine-orm-admin-bundle'),
     'Sonata\\DatagridBundle\\' => array($vendorDir . '/sonata-project/datagrid-bundle'),
     'Sonata\\CoreBundle\\' => array($vendorDir . '/sonata-project/core-bundle'),
+    'Sonata\\ClassificationBundle\\' => array($vendorDir . '/sonata-project/classification-bundle'),
     'Sonata\\Cache\\Tests\\' => array($vendorDir . '/sonata-project/cache/test'),
     'Sonata\\Cache\\' => array($vendorDir . '/sonata-project/cache/lib'),
     'Sonata\\BlockBundle\\' => array($vendorDir . '/sonata-project/block-bundle'),

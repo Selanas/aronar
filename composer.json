@@ -24,7 +24,9 @@
         "sonata-project/doctrine-orm-admin-bundle": "dev-master",
         "sonata-project/easy-extends-bundle": "dev-master",
         "sonata-project/user-bundle": "dev-master",
-        "sonata-project/datagrid-bundle": "dev-master"
+        "sonata-project/datagrid-bundle": "dev-master",
+        "sonata-project/news-bundle": "dev-master",
+        "sonata-project/classification-bundle": "~2.2@dev"
     },
     "scripts": {
         "post-install-cmd": [
