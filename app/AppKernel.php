@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Sonata\BlockBundle\SonataBlockBundle(),
             //new Sonata\jQueryBundle\SonatajQueryBundle(),   //Semble Mort ?
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
                 
 
                 // If you haven't already, add the storage bundle
